@@ -45,7 +45,7 @@
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-auto p-4">
 
                 @foreach ($perangkatDesas->data->resource as $perangkatDesa)
-                    <div class="bg-white rounded-lg shadow-md p-5 h-64 w-48 text-center xl:w-64 xl:h-80">
+                    <div class="bg-white rounded-lg shadow-md p-5 h-64 w-42 text-center xl:w-64 xl:h-80">
                         <img src="{{$perangkatDesa->foto}}" alt="kepala Desa"
                             class="w-40 h-40 object-cover mx-auto rounded-lg xl:w-56 xl:h-60">
                         <h3 class="text-lg font-semibold mt-2 overflow-hidden text-ellipsis whitespace-nowrap">
