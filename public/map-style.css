@@ -26,7 +26,7 @@ body {
 }
 
 .popup-fixed {
-    max-height: 60%;
+    max-height: 70%;
     width: 100%;
     position: fixed;
     top: auto;
@@ -73,7 +73,7 @@ body {
     display: none;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 687px) {
     .leaflet-pane,
     .leaflet-fixed-pane {
         width: auto;

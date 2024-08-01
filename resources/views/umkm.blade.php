@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ env("APP_NAME") . " | UMKM Desa" }}</title>
+    <title>{{ env('APP_NAME') . ' | UMKM Desa' }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -32,19 +32,12 @@
             <x-headerArtikel subJudul="Kenali UMKM " judul="Profil UMKM Desa Papungan" />
             <div class="text-sm font-normal ">Berikut adalah video singkat mengenai UMKM di Desa Papungan. Simak video
                 berikut untuk mengetahui bagaimana masyarakat Desa Papungan mengembangkan potensi usaha mereka!</div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/0qdpec8USmA?si=aCLVXLXC3n8n3fUf"
-                title="YouTube video player"
+
+            {{-- Video --}}
+            <iframe width="560" height="315" src="{{ $videoUmkm->data->penjelasan }}" title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-                class="mx-auto w-full md:w-[560px] h-[315px]"></iframe>
-
-                {{-- Video --}}
-            <div class="relative mx-auto" style="width: 600px; height: 337.5px;">
-                <iframe class="absolute top-0 left-0 w-full h-full rounded-lg"
-                    src="{{ $videoUmkm->data->penjelasan }}" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
+                class="mx-auto w-full md:w-[560px] aspect-video rounded-lg "></iframe>
 
             <x-cardSubjudul jenisJudul="Kenali UMKM" judul="Peta Digital UMKM Desa Papungan"
                 deskripsi="Berikut adalah Peta UMKM dari Desa Papungan. Simak informasi berikut untuk mengetahui lokasi dan jenis usaha yang ada di desa  kita, serta bagaimana UMKM ini berkontribusi dalam perekonomian lokal!" />
@@ -54,7 +47,7 @@
         <!-- peta umkm-->
         <div id="peta"></div>
         <div class="my-5 mb-5">
-            <iframe src="/peta-umkm" title="" class="w-full h-screen md:h-96 py-20 md:p-0 px-5 md:px-0"
+            <iframe src="/peta-umkm" title="" class="w-full h-screen md:h-[490px] py-20 md:p-0 px-5 md:px-0"
                 id="petaumkm"></iframe>
         </div>
 
@@ -66,7 +59,8 @@
 
         <!-- Search -->
         <form action="{{ route('umkm.index') }}" method="GET">
-            <div class="flex items-center space-x-2 md:w-1/2 lg:w-1/4 hover:border-gray-400">
+            <div
+                class="flex flex-wrap md:flex-nowrap space-y-2 md:space-y-0 items-center space-x-2 md:w-1/2 lg:w-1/4 hover:border-gray-400">
                 <label class="input input-bordered flex items-center gap-2 border-gray-400 bg-white">
                     <input name="nama" type="search" class="grow" placeholder="Search" />
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
@@ -229,7 +223,7 @@
         });
     });
 
-    function scrollToElement(elementId, offset = 30) {
+    function scrollToElement(elementId, offset = 60) {
         if (window.innerWidth >= 768) {
             offset = 120;
         }
@@ -251,3 +245,4 @@
 </script>
 
 </html>
+

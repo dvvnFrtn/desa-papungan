@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ env("APP_NAME") . " | Pariwisata Desa" }}</title>
+    <title>{{ env('APP_NAME') . ' | Pariwisata Desa' }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -37,19 +37,17 @@
             </div>
 
             {{-- Video --}}
-            <div class="relative" style="padding-bottom: 56.25%;">
-                <iframe class="mx-auto absolute top-0 left-0 w-full h-full rounded-lg"
-                    src="{{ $dataVideo->data->penjelasan }}" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
+            <iframe width="560" height="315" src="{{ $dataVideo->data->penjelasan }}" title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                class="mx-auto w-full md:w-[560px] aspect-video rounded-lg "></iframe>
 
             {{-- Carrousel foto --}}
             <div class="carousel carousel-center rounded-box space-x-3 w-full border border-neutral">
 
                 @foreach ($pariwisata->data as $foto)
-                    <div class="carousel-item w-44 h-32 md:w-44 md:h-40 ">
-                        <img src="{{ $foto->foto }}" alt="-" />
+                    <div class="carousel-item w-44 h-auto md:w-44 object-cover object-center">
+                        <img src="{{ $foto->foto }}" alt="-" class="" />
                     </div>
                 @endforeach
 
