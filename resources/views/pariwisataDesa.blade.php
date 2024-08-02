@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ env("APP_NAME") . " | Pariwisata Desa" }}</title>
+    <title>{{ env('APP_NAME') . ' | Pariwisata Desa' }}</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -45,11 +45,12 @@
             </div>
 
             {{-- Carrousel foto --}}
-            <div class="carousel carousel-center rounded-box space-x-3 w-full border border-neutral">
+            <div
+                class="carousel carousel-center rounded-box space-x-1 w-full border border-neutral flex justify-items-center">
 
                 @foreach ($pariwisata->data as $foto)
-                    <div class="carousel-item w-44 h-32 md:w-44 md:h-40 ">
-                        <img src="{{ $foto->foto }}" alt="-" />
+                    <div class="carousel-item w-44 h-32 md:h-40">
+                        <img src="{{ $foto->foto }}" alt="-" class="object-contain mx-auto" />
                     </div>
                 @endforeach
 
