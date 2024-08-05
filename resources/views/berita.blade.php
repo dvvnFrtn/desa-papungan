@@ -29,10 +29,10 @@
                 <li class="truncate">{{ $berita->data->judul }}</li>
             </ul>
         </div>
-        <div class="flex flex-row items-start">
+        <div class="flex flex-row items-center ">
             <!-- Judul -->
-            <div class="space-y-5 md:basis-3/4 text-pretty">
-                <div class=" text-black text-2xl md:text-4xl font-semibold font-jakarta">{{ $berita->data->judul }}
+            <div class="space-y-5 md:basis-3/4 text-pretty ">
+                <div class=" text-black text-2xl md:text-4xl font-semibold text-left font-jakarta">{{ $berita->data->judul }}
                 </div>
                 <!-- Tanggal and Admin info -->
                 <div
@@ -48,13 +48,13 @@
                     </div>
                 </div>
                 <!-- berita img -->
-                <img src="{{ $berita->data->foto }}" alt="" class="max-h-96 min-w-full object-cover">
+                <img src="{{ $berita->data->foto }}" alt="" class="max-h-96 min-w-full object-cover rounded-lg ">
                 <!-- isi berita -->
                 <p class="text-lg">{!! nl2br(e($berita->data->isi)) !!}</p>
             </div>
 
             <!-- Side content -->
-            <div class="basis-1/4 pl-10 sticky top-40">
+            <div class="basis-1/4 md:pl-10 sticky top-40">
                 <div class="hidden md:block text-lg font-semibold font-jakarta max-h-96">
                     Lihat Informasi Lainnya
                     <div class="w-full border-b-2 border-gray-400 my-2"></div>

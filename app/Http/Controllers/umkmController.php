@@ -25,7 +25,7 @@ class umkmController extends Controller
         $currentPage = LengthAwarePaginator::resolveCurrentPage();
 
         // Define how many items we want to be visible in each page
-        $perPage = 5;
+        $perPage = 10;
 
         // Slice the collection to get the items to display in current page
         $currentPageItems = $collection->slice(($currentPage - 1) * $perPage, $perPage)->all();

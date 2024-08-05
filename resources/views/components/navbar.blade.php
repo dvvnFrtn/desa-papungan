@@ -4,7 +4,7 @@
         <div class="w-screen bg-primary flex">
             <div class="container flex mx-auto justify-between py-2 text-center items-center">
                 <div class="flex gap-2 px-4">
-                    <div class="p-1 justify-start items-center gap-2 flex border-r-2 border-base-100">
+                    <div class="p-1 justify-start items-center md:gap-2 flex border-r-2 border-base-100">
                         <img src="{{asset('img/phoneLogo.svg')}}" alt="phoneLogo" class="w-4 h-4 relative ">
                         <div class="px-2 text-xs font-medium font-jakarta ">(0342) 814031</div>
                     </div>
@@ -40,7 +40,7 @@
 
                 <button id="mobile-menu-button"
                     class="w-10 h-10 relative bg-primary rounded-lg p-2 flex flex-col justify-between mr-5 hover:opacity-70 transition duration-300 lg:hidden">
-                    <img src="img/hamburgerLogo.svg" class="w-6 h-6"> 
+                    <img src="{{ asset('img/hamburgerLogo.svg')}}" class="w-6 h-6"> 
                 </button>
 
                 <!-- Mobile Menu -->
